@@ -1,0 +1,112 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* .allActions-actions {
+  background-color: #2196f3;
+  border-radius: 12px;
+
+} */
+
+.allActions-action {
+  background-color: #2196f3;
+  border-radius: 12px;
+  margin: 20px 0;
+  color: white;
+  width: 300px;
+  padding: 10px;
+}
+
+.allActions-balance {
+  background-color: #2196f3;
+  border-radius: 50%;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.allActions-line {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 2px;
+  height: 130px;
+  margin: 0 5px;
+  background-color: #2196f3;
+}
+
+.allActions-horiz-line {
+  width: 20px;
+  height: 2px;
+  margin-left: 17px;
+  background-color: #2196f3;
+}
+
+.allActions-horiz-line2 {
+  width: 20px;
+  height: 2px;
+  background-color: #2196f3;
+}
+
+.manager-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+input:hover {
+  cursor: pointer;
+ 
+}
+
+input[type='button']:hover {
+  background-color: #1d87da;
+}
+
+
+
+
+ /* -------------------------------------------------- MEDIA QUERIES ------------------------------------------------ */
+
+/* Smartphones */
+@media only screen and (max-width: 500px) {
+
+  .manager-grid {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  
+}
+
+/* Tablet */
+@media(min-width: 501px) and (max-width: 768px) {
+
+}
+
+
+
+/* Normal */
+@media(min-width: 769px) and (max-width: 1200px) {
+
+}
+
+/* Widescreen */
+@media(min-width: 1201px) {
+
+}
+
+/* Landscape */
+@media(max-height: 500px) {
+  
+
+ 
+
+}
