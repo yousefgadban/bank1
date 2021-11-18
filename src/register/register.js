@@ -35,7 +35,7 @@ import {  AddNewUser } from '../api/api'
                 console.log(actionResponse);
                 if (response.status === 201) {
                     updateHeader(1)
-                    history.push(`/account/${actionResponse.id}/${'123'}`);
+                    history.push(`/account/${actionResponse.data._id}/${'123'}`);
                 } else {
                     alert('Something went wrong... sorry');
                 }

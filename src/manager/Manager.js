@@ -25,7 +25,7 @@ export const Manager = () => {
     const onDeleteUser= (deleteId) => {
         console.log('manager onDeleteUser ', deleteId);
         let updated = allUsers.filter((user) => {
-            return user.id !== deleteId;
+            return user._id !== deleteId;
         })
         setAllUsers(updated);
     }

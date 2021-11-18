@@ -56,8 +56,8 @@ import { GetAllUsers, LoginUser } from '../api/api'
                 if (actionResponse.result === 'success') {
                     setUserLoggedInSuccessfully(true);
 
-                    setUserId(actionResponse.data.id);
-                    history.push(`/account/${actionResponse.data.id}/${'123'}`);
+                    setUserId(actionResponse.data._id);
+                    history.push(`/account/${actionResponse.data._id}/${'123'}`);
                     
                     if (actionResponse.data.role === 'manager') {
                         updateHeader(2)

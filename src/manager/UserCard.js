@@ -25,7 +25,7 @@ export const UserCard = ({user, onDeleteUser}) => {
         if (+amountToTransfer > 0) {
 
             let params = {
-                userId: user.id,
+                userId: user._id,
                 amount: +amountToTransfer,
                 isWithDrawal: false,
                 toAccount: user.accountNumber,
@@ -50,14 +50,12 @@ export const UserCard = ({user, onDeleteUser}) => {
             console.log('cant transfer zero or less');
         }
 
-        
-
     }
 
     const onActiveClicked = () => {
-        console.log('onActiveClicked', user.id);
+        console.log('onActiveClicked', user._id);
 
-        UpdateUserStatus(user.id).then((response)=>{
+        UpdateUserStatus(user._id).then((response)=>{
             let actionResponse = response.data;
             console.log(actionResponse);
             if (response.status === 200) {
@@ -69,13 +67,13 @@ export const UserCard = ({user, onDeleteUser}) => {
     }
 
     const onDeleteUserClicked = () => {
-        console.log('onDeleteUserClicked ', user.id);
+        console.log('onDeleteUserClicked ', user._id);
 
-        DeleteUser(user.id).then((response)=>{
+        DeleteUser(user._id).then((response)=>{
             let actionResponse = response.data;
             console.log(actionResponse);
             if (response.status === 200) {
-                onDeleteUser(user.id)
+                onDeleteUser(user._id)
             } else {
                 console.log('somthing wrong, try again later');
             }

@@ -21,6 +21,7 @@ export const Account = (props) => {
         console.log('two params ', id, pass);
         // get user data from db
         GetUserData(id).then((response)=>{
+            console.log(response);
             let currentUser = response.data.data;
             console.log(currentUser);
             setUser(currentUser);
@@ -53,6 +54,13 @@ export const Account = (props) => {
     const onAllActionsClicked = () => {
         console.log('onAllActionsClicked');
         setDisplay('allActions');
+        GetAllAction(id).then((response)=>{
+            let allActions = response.data;
+            console.log(allActions);
+            setAllActions(allActions.data);
+            
+            //calculateCurrentAmount();
+        });
     }
 
     const onWithDrawalClicked = () => {
@@ -66,7 +74,7 @@ export const Account = (props) => {
     }
 
     const onWithDrawalCash = (amount) => {
-        console.log('onWithDrawalCash', typeof amount);
+        console.log('onWithDrawalCash', amount, id);
 
         if (currentAmount - amount >= -5000) {
             console.log('do withdrawal');
