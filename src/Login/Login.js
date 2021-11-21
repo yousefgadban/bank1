@@ -58,6 +58,8 @@ import { GetAllUsers, LoginUser } from '../api/api'
 
                     setUserId(actionResponse.data._id);
                     history.push(`/account/${actionResponse.data._id}/${'123'}`);
+
+                    localStorage.setItem("userID", actionResponse.data._id);
                     
                     if (actionResponse.data.role === 'manager') {
                         updateHeader(2)

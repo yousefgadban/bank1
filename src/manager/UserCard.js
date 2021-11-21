@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export const UserCard = ({user, onDeleteUser}) => {
 
     const [allActions, setAllActions] = useState([]);
-    const [currentAmount, setCurrentAmount] = useState(0);
+    const [currentAmount, setCurrentAmount] = useState(user.balance);
     const [amountToTransfer, setAmountToTransfer] = useState(0);
     const [status, setStatus] = useState(false);
 

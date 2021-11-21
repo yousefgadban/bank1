@@ -48,6 +48,7 @@ export const Manager = () => {
             let filteredUsers = response.data.data;
             console.log('filteredUsers', filteredUsers);
             setShowLoader(false);
+            setAllUsers([]);
             setAllUsers(filteredUsers);
 
         });
